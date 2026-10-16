@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e131c">
+<title>Deportivo 3D — visor demo</title>
+<meta name="description" content="Visor 3D de un carro deportivo low-poly hecho con Three.js. Arrastra para girarlo. Demo sin backend.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<canvas id="escena" aria-label="Modelo 3D de un carro deportivo. Arrastra para girarlo."></canvas>
+
+<header class="hud arriba">
+  <div class="marca">
+    <span class="punto" aria-hidden="true"></span>
+    <span><b>Deportivo 3D</b><small>low-poly · demo</small></span>
+  </div>
+  <button class="chip boton" id="reset" type="button">Centrar vista</button>
+</header>
+
+<p class="chip pista" id="hint">Arrastra para girar · rueda para acercar</p>
+
+<footer class="hud abajo">
+  <span class="chip tenue">Hecho con <b>Three.js</b></span>
+  <span class="chip tenue oculta-min">Modelo de ejemplo · sin datos reales</span>
+</footer>
+
+<div class="carga" id="carga">
+  <div class="spinner" aria-hidden="true"></div>
+  <p>Cargando el deportivo…</p>
+</div>
+
+<noscript>
+  <div class="carga"><p>Necesitas activar JavaScript para ver el modelo 3D.</p></div>
+</noscript>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
